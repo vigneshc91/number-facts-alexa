@@ -8,6 +8,10 @@ app = Flask(__name__)
 ask = Ask(app, '/')
 logging.getLogger('flask_ask').setLevel(logging.DEBUG)
 
+@app.route('/')
+def index():
+    return 'welcome to my site.'
+
 @ask.launch
 def launch_intent():
     speech = render_template('welcome')
