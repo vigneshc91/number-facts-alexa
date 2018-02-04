@@ -1,0 +1,3 @@
+Flask==0.11.1
+Flask-Assistant==0.2.94
+Jinja2==2.8

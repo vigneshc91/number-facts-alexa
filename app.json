@@ -1,0 +1,11 @@
+{
+    "name": "Number Fact",
+    "description": "Number Fact for alexa skill kit",
+    "keywords": [
+      "flask",
+      "python",
+      "flask-ask",
+      "alexa"
+    ],
+    "repository": "https://github.com/vigneshc91/number-facts-alexa"
+  }
