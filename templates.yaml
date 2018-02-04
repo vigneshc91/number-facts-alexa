@@ -2,4 +2,5 @@ welcome: Welcome to number facts. You can say any number to know about that numb
 bye: Goodbye.
 help: Say any number to know about the fact.
 need_number: You need to say a number to know about that.
+need_number_prompt: Can you say a number.
 no_facts: There are no facts available for {{ number }}

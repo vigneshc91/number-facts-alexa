@@ -6,6 +6,7 @@ import logging
 
 app = Flask(__name__)
 ask = Ask(app, '/')
+app.config['ASK_APPLICATION_ID'] = 'amzn1.ask.skill.748c8f2a-ce88-4275-9c40-af3adcd3090a'
 logging.getLogger('flask_ask').setLevel(logging.DEBUG)
 
 @app.route('/')
@@ -45,7 +46,8 @@ def fact_intent(number):
             return statement(speech)
     except ValueError:
         speech = render_template('need_number')
-        return question(speech)
+        again = render_template('need_number_prompt')
+        return question(speech).reprompt(again)
 
 if __name__ == '__main__':
     app.run(debug=True)
