@@ -37,7 +37,7 @@ def fact_intent(number):
     try:
         fact_number = int(number)
         URL = "http://numbersapi.com/{}".format(fact_number)
-        response = requests.get(URL)
+        response = requests.get(URL).json()
         if response.status_code != 200:
             speech = render_template('no_fact', number=number)
             return statement(speech)
