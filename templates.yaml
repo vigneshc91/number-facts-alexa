@@ -1,5 +1,5 @@
 welcome: Welcome to number facts. You can say any number to know about that number fact.
 bye: Goodbye.
-help: Say any numbr to know about the fact.
+help: Say any number to know about the fact.
 need_number: You need to say a number to know about that.
 no_facts: There are no facts available for {{ number }}
