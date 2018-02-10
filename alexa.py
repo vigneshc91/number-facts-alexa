@@ -42,7 +42,7 @@ def fact_intent(number):
             speech = render_template('no_fact', number=number)
             return statement(speech)
         else:
-            speech = response.content
+            speech = response.content.decode("utf-8")
             return statement(speech)
     except ValueError:
         speech = render_template('need_number')
