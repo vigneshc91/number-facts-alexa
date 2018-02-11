@@ -34,6 +34,10 @@ def stop_intent():
 
 @ask.intent('FactIntent')
 def fact_intent(number):
+    if number is None:
+        speech = render_template('need_number')
+        again = render_template('need_number_prompt')
+        return question(speech).reprompt(again)
     try:
         fact_number = int(number)
         URL = "http://numbersapi.com/{}".format(fact_number)
